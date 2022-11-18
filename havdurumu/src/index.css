@@ -1,0 +1,112 @@
+:root {
+    --renk-baslik: #ffe978;
+    --renk-arama-arka: #eaeaea;
+    --renk-default: #fff;
+    --renk-sonuc-arka: #474747;
+
+    --baslik-yazı-boyut: 48px;
+    --arama-yazı-boyut: 22px;
+    --sehir-yazı-boyut: 64px;
+    --derece-yazı-boyut: 96px;
+    --statu-yazı-boyut: 36px;
+
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.arkaplan {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0;
+  }
+
+.arkaplan .arkaplan-resim {
+    position:  relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+    right: 0;
+    bottom: 0;
+}
+.arkaplan .overlay {
+    position: absolute;
+    z-index: -3;
+    widht: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#baslik {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--renk-baslik);
+    font-size: var(--baslik-yazı-boyut);
+}
+
+.arama {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.arama .arama-input{
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    border: none;
+    font-size: var(--arama-yazı-boyut);
+    background-color: var(--renk-arama-arka);
+ }   
+
+.sonuc {
+    position: relative;
+    margin-top: 100px;
+}
+
+.sonuc .sehir{
+    color: var(--renk-default);
+    font-size: var(--sehir-yazı-boyut);
+    text-align: center;
+}
+
+.sonuc .detay{
+     margin-top: 60px;
+     width:100%;
+     height: 250px;
+     background-color: var(--renk-sonuc-arka);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+.sonuc .detay .derece {
+    color: var(--renk-default);
+    font-size: var(--derece-yazı-boyut);
+    font-weight: bold;
+}
+.sonuc .detay .statu {
+    color: var(--renk-default);
+    font-size: var(--statu-yazı-boyut);
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 950px) {
+    .uygulama {
+        width: 60%;
+        height: 100vh;
+        margin: 0 auto;
+        background-color: rgba(3, 3, 3, 0.67);
+    }
+}
